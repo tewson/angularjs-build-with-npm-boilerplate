@@ -9,3 +9,13 @@ Features
 - An AngularJS app with Angular UI Router
 - Served via serve-static
 - Bundle client-side scripts with Browserify
+
+To-do
+-----
+
+- [ ] Template bundling
+- [ ] Watch
+- [ ] Live reload
+- [ ] CSS framework
+- [ ] Unit testing
+- [ ] End-to-end testing
