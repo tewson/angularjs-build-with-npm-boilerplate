@@ -3,5 +3,7 @@
   "version": "0.0.1",
   "scripts": {},
   "devDependencies": {},
-  "dependencies": {}
+  "dependencies": {
+    "standard": "^7.1.2"
+  }
 }
