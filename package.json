@@ -1,7 +1,9 @@
 {
   "name": "angularjs-build-with-npm-boilerplate",
   "version": "0.0.1",
-  "scripts": {},
+  "scripts": {
+    "lint": "node ./node_modules/standard/bin/cmd.js"
+  },
   "devDependencies": {},
   "dependencies": {
     "standard": "^7.1.2"
