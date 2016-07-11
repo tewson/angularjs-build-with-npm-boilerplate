@@ -3,9 +3,10 @@
   "version": "0.0.1",
   "scripts": {
     "lint": "node ./node_modules/standard/bin/cmd.js",
+    "build:clean": "node ./node_modules/rimraf/bin.js public/*",
     "build:scripts": "mkdir -p public/scripts && node ./node_modules/browserify/bin/cmd.js src/app.js -o public/scripts/bundle.js",
     "build:templates": "cp src/index.html public/",
-    "build": "npm run build:scripts && npm run build:templates",
+    "build": "npm run build:clean && npm run build:scripts && npm run build:templates",
     "start": "npm run build && node server.js"
   },
   "devDependencies": {},
@@ -13,6 +14,7 @@
     "angular": "^1.5.7",
     "browserify": "^13.0.1",
     "finalhandler": "^0.5.0",
+    "rimraf": "^2.5.3",
     "serve-static": "^1.11.1",
     "standard": "^7.1.2"
   }
