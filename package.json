@@ -2,10 +2,14 @@
   "name": "angularjs-build-with-npm-boilerplate",
   "version": "0.0.1",
   "scripts": {
-    "lint": "node ./node_modules/standard/bin/cmd.js"
+    "lint": "node ./node_modules/standard/bin/cmd.js",
+    "build": "cp src/index.html public/",
+    "start": "npm run build && node server.js"
   },
   "devDependencies": {},
   "dependencies": {
+    "finalhandler": "^0.5.0",
+    "serve-static": "^1.11.1",
     "standard": "^7.1.2"
   }
 }
