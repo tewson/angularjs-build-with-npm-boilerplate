@@ -2,7 +2,8 @@ var angular = require('angular')
 
 angular.module('app',
   [
-    require('angular-ui-router')
+    require('angular-ui-router'),
+    'app.templates'
   ]
 )
   .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
