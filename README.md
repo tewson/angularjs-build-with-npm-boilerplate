@@ -13,7 +13,8 @@ Features
 To-do
 -----
 
-- [ ] Template bundling
+- [x] Template bundling
+- [ ] Controller(s)
 - [ ] Watch
 - [ ] Live reload
 - [ ] CSS framework
