@@ -4,9 +4,9 @@
   "scripts": {
     "lint": "node ./node_modules/standard/bin/cmd.js",
     "build:clean": "node ./node_modules/rimraf/bin.js public/* build/*",
-    "build:scripts": "mkdir -p public/scripts && node ./node_modules/browserify/bin/cmd.js src/app.js build/templates.bundle.js -o public/scripts/bundle.js",
     "build:templates": "node ./scripts/build-templates.js && cp src/index.html public/",
-    "build": "npm run build:clean && npm run build:scripts && npm run build:templates",
+    "build:scripts": "mkdir -p public/scripts && node ./node_modules/browserify/bin/cmd.js src/app.js build/templates.bundle.js -o public/scripts/bundle.js",
+    "build": "npm run build:clean && npm run build:templates && npm run build:scripts",
     "start": "npm run build && node server.js"
   },
   "devDependencies": {},
