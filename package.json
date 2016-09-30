@@ -30,7 +30,8 @@
   },
   "standard": {
     "ignore": [
-      "/build"
+      "/build",
+      "/public"
     ]
   }
 }
