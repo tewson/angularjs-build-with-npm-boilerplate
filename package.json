@@ -4,8 +4,8 @@
   "scripts": {
     "lint": "standard",
 
-    "build:clean": "node ./node_modules/rimraf/bin.js public/* build/*",
-    "build:templates": "node ./scripts/build-templates.js && cp src/index.html public/ && mkdir -p public/scripts && cp build/templates.bundle.js public/scripts/templates.js",
+    "build:clean": "node ./node_modules/rimraf/bin.js public/* build/* && mkdir -p public/scripts",
+    "build:templates": "node ./scripts/build-templates.js && cp src/index.html public/ && cp build/templates.bundle.js public/scripts/templates.js",
     "build:scripts": "mkdir -p public/scripts && node ./node_modules/browserify/bin/cmd.js src/app.js -o public/scripts/app.js",
     "build": "npm run lint && npm run build:clean && npm run build:templates && npm run build:scripts",
 
