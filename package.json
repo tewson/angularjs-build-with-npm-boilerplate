@@ -3,11 +3,16 @@
   "version": "0.0.1",
   "scripts": {
     "lint": "node ./node_modules/standard/bin/cmd.js",
+
     "build:clean": "node ./node_modules/rimraf/bin.js public/* build/*",
     "build:templates": "node ./scripts/build-templates.js && cp src/index.html public/",
     "build:scripts": "mkdir -p public/scripts && node ./node_modules/browserify/bin/cmd.js src/app.js build/templates.bundle.js -o public/scripts/bundle.js",
     "build": "npm run build:clean && npm run build:templates && npm run build:scripts",
-    "start": "npm run build && node server.js"
+
+    "watch:scripts": "onchange 'src/**/*.js' -v -- npm run build:scripts",
+    "watch": "parallelshell 'npm run watch:scripts'",
+
+    "start": "npm run build && parallelshell 'node server.js' 'npm run watch'"
   },
   "devDependencies": {},
   "dependencies": {
@@ -17,6 +22,8 @@
     "finalhandler": "^0.5.0",
     "glob-all": "^3.1.0",
     "ng-html2js": "^3.0.0",
+    "onchange": "^3.0.2",
+    "parallelshell": "^2.0.0",
     "rimraf": "^2.5.4",
     "serve-static": "^1.11.1",
     "standard": "^8.3.0"
