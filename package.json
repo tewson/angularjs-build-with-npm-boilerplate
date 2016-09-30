@@ -9,8 +9,9 @@
     "build:scripts": "mkdir -p public/scripts && node ./node_modules/browserify/bin/cmd.js src/app.js -o public/scripts/app.js",
     "build": "npm run lint && npm run build:clean && npm run build:templates && npm run build:scripts",
 
+    "watch:templates": "onchange 'src/**/*.html' -v -- npm run build:templates",
     "watch:scripts": "onchange 'src/**/*.js' -v -- npm run build:scripts",
-    "watch": "parallelshell 'npm run watch:scripts'",
+    "watch": "parallelshell 'npm run watch:templates' 'npm run watch:scripts'",
 
     "start": "npm run build && parallelshell 'node server.js' 'npm run watch'"
   },
