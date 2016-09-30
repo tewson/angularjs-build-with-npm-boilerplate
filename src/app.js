@@ -1,22 +1,4 @@
-var angular = require('angular')
-
-angular.module('app',
-  [
-    require('angular-ui-router'),
-    'app.templates'
-  ]
-)
-  .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
-    $stateProvider.state('app', {
-      url: '',
-      abstract: true,
-      template: '<div ui-view></div>'
-    })
-
-    $urlRouterProvider.otherwise('/home')
-  }])
-  .run(function () {
-    console.log('AngularJS is running.')
-  })
-
-require('./home/home.routes.js')
+require('./app.module.js')
+require('./app.config.js')
+require('./app.run.js')
+require('./app.routes.js')
