@@ -14,7 +14,7 @@ To-do
 -----
 
 - [x] Template bundling
-- [ ] Controller(s)
+- [x] Controller(s)
 - [ ] Watch
 - [ ] Live reload
 - [ ] CSS framework
