@@ -9,6 +9,7 @@
     "build:scripts": "mkdir -p public/scripts && browserify src/app.js -o public/scripts/app.js",
     "build": "npm run lint && npm run build:clean && npm run build:templates && npm run build:stylesheets && npm run build:scripts",
     "test:unit": "karma start --single-run",
+    "test:e2e": "protractor",
     "watch:templates": "onchange 'src/**/*.html' -v -- npm run build:templates",
     "watch:stylesheets": "onchange 'src/**/*.scss' -v -- npm run build:stylesheets",
     "watch:scripts": "onchange 'src/**/*.js' -e 'src/**/*.spec.js' -v -- npm run build:scripts",
@@ -36,6 +37,7 @@
     "node-sass": "^3.10.1",
     "onchange": "^3.0.2",
     "parallelshell": "^2.0.0",
+    "protractor": "^4.0.9",
     "rimraf": "^2.5.4",
     "serve-static": "^1.11.1",
     "standard": "^8.3.0",
@@ -50,7 +52,11 @@
       "angular",
       "describe",
       "it",
-      "beforeEach"
+      "beforeEach",
+      "browser",
+      "expect",
+      "element",
+      "by"
     ]
   }
 }

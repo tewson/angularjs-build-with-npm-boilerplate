@@ -15,6 +15,6 @@ Features
 To-do
 -----
 
-- [ ] End-to-end testing
+- [x] End-to-end testing
 - [ ] Minification
 - [ ] Uglification
