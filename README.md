@@ -15,10 +15,6 @@ Features
 To-do
 -----
 
-- [x] Template bundling
-- [x] Controller(s)
-- [x] Watch
-- [x] Live reload
-- [x] CSS framework
-- [x] Unit testing
 - [ ] End-to-end testing
+- [ ] Minification
+- [ ] Uglification
