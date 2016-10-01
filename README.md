@@ -16,7 +16,7 @@ To-do
 - [x] Template bundling
 - [x] Controller(s)
 - [x] Watch
-- [ ] Live reload
+- [x] Live reload
 - [ ] CSS framework
 - [ ] Unit testing
 - [ ] End-to-end testing

@@ -3,17 +3,15 @@
   "version": "0.0.1",
   "scripts": {
     "lint": "standard",
-
     "build:clean": "node ./node_modules/rimraf/bin.js public/* build/* && mkdir -p public/scripts",
     "build:templates": "node ./scripts/build-templates.js && cp src/index.html public/ && cp build/templates.bundle.js public/scripts/templates.js",
     "build:scripts": "mkdir -p public/scripts && node ./node_modules/browserify/bin/cmd.js src/app.js -o public/scripts/app.js",
     "build": "npm run lint && npm run build:clean && npm run build:templates && npm run build:scripts",
-
     "watch:templates": "onchange 'src/**/*.html' -v -- npm run build:templates",
     "watch:scripts": "onchange 'src/**/*.js' -v -- npm run build:scripts",
     "watch": "parallelshell 'npm run watch:templates' 'npm run watch:scripts'",
-
-    "start": "npm run build && parallelshell 'node server.js' 'npm run watch'"
+    "live-reload": "live-reload --port 9091 public/",
+    "start": "npm run build && parallelshell 'npm run live-reload' 'node server.js' 'npm run watch'"
   },
   "devDependencies": {},
   "dependencies": {
@@ -22,6 +20,7 @@
     "browserify": "^13.1.0",
     "finalhandler": "^0.5.0",
     "glob-all": "^3.1.0",
+    "live-reload": "^1.1.0",
     "ng-html2js": "^3.0.0",
     "onchange": "^3.0.2",
     "parallelshell": "^2.0.0",
