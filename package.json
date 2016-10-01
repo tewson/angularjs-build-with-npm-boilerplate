@@ -14,7 +14,7 @@
     "watch:scripts": "onchange 'src/**/*.js' -v -- npm run build:scripts",
     "watch": "parallelshell 'npm run watch:templates' 'npm run watch:stylesheets' 'npm run watch:scripts'",
     "live-reload": "live-reload --port 9091 public/",
-    "start": "npm run build && parallelshell 'npm run live-reload' 'node server.js' 'npm run watch'"
+    "start": "npm run test:unit && npm run build && parallelshell 'npm run live-reload' 'node server.js' 'npm run watch'"
   },
   "devDependencies": {},
   "dependencies": {
