@@ -7,8 +7,10 @@ Features
 --------
 
 - An AngularJS app with Angular UI Router
+- Bootstrap with SASS
 - Served via serve-static
 - Bundle client-side scripts with Browserify
+- Live-reload
 
 To-do
 -----
