@@ -11,10 +11,11 @@
     "test:unit": "karma start --single-run",
     "watch:templates": "onchange 'src/**/*.html' -v -- npm run build:templates",
     "watch:stylesheets": "onchange 'src/**/*.scss' -v -- npm run build:stylesheets",
-    "watch:scripts": "onchange 'src/**/*.js' -v -- npm run build:scripts",
-    "watch": "parallelshell 'npm run watch:templates' 'npm run watch:stylesheets' 'npm run watch:scripts'",
+    "watch:scripts": "onchange 'src/**/*.js' -e 'src/**/*.spec.js' -v -- npm run build:scripts",
+    "watch:test:unit": "karma start --auto-watch",
+    "watch": "parallelshell 'npm run watch:templates' 'npm run watch:stylesheets' 'npm run watch:scripts' 'npm run watch:test:unit'",
     "live-reload": "live-reload --port 9091 public/",
-    "start": "npm run test:unit && npm run build && parallelshell 'npm run live-reload' 'node server.js' 'npm run watch'"
+    "start": "npm run build && parallelshell 'npm run live-reload' 'node server.js' 'npm run watch'"
   },
   "devDependencies": {},
   "dependencies": {
