@@ -8,7 +8,7 @@
     "build:stylesheets": "node-sass --include-path ./node_modules/bootstrap-sass/assets/stylesheets/ src/app.scss public/stylesheets/app.css",
     "build:scripts": "mkdir -p public/scripts && browserify src/app.js -o public/scripts/app.js",
     "build": "npm run lint && npm run build:clean && npm run build:templates && npm run build:stylesheets && npm run build:scripts",
-    "test:unit": "npm run build:templates && karma start --single-run",
+    "test:unit": "karma start --single-run",
     "watch:templates": "onchange 'src/**/*.html' -v -- npm run build:templates",
     "watch:stylesheets": "onchange 'src/**/*.scss' -v -- npm run build:stylesheets",
     "watch:scripts": "onchange 'src/**/*.js' -v -- npm run build:scripts",

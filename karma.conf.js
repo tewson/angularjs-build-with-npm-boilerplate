@@ -4,12 +4,13 @@ module.exports = function (config) {
     frameworks: ['browserify', 'mocha'],
     files: [
       'src/app.js',
-      'build/templates.bundle.js',
+      'scripts/unit-test-setup.js',
       'node_modules/angular-mocks/angular-mocks.js',
       'src/**/*.spec.js'
     ],
     preprocessors: {
       'src/app.js': ['browserify'],
+      'scripts/unit-test-setup.js': ['browserify'],
       'src/**/*.spec.js': ['browserify']
     },
     browserify: {
