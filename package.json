@@ -14,7 +14,6 @@
     "watch": "parallelshell 'npm run watch:templates' 'npm run watch:stylesheets' 'npm run watch:scripts'",
     "live-reload": "live-reload --port 9091 public/",
     "unit-test": "npm run build:templates && karma start --single-run",
-    "unit-test-mocha": "mocha src/**/*.spec.js",
     "start": "npm run build && parallelshell 'npm run live-reload' 'node server.js' 'npm run watch'"
   },
   "devDependencies": {},
