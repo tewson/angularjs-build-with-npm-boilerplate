@@ -20,5 +20,5 @@ To-do
 - [x] Watch
 - [x] Live reload
 - [x] CSS framework
-- [ ] Unit testing
+- [x] Unit testing
 - [ ] End-to-end testing
