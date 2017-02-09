@@ -33,6 +33,7 @@
     "karma-mocha": "^1.2.0",
     "karma-phantomjs-launcher": "^1.0.2",
     "live-reload": "^1.1.0",
+    "mocha": "^3.2.0",
     "ng-html2js": "^3.0.0",
     "node-sass": "^3.10.1",
     "onchange": "^3.0.2",
